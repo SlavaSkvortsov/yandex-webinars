@@ -4,9 +4,9 @@ from typing import Any
 from httpx import AsyncClient
 from sqlalchemy import select
 
-from my_async_app.db import Session
-from my_async_app.db_models import MyTable
-from my_async_app.more_functions import mock_me
+from db import Session
+from db_models import MyTable
+from more_functions import mock_me
 
 
 async def fetch_important_data_from_database() -> list[str]:

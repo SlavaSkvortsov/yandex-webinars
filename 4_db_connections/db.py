@@ -9,7 +9,7 @@ from config import settings
 
 
 def create_engine() -> AsyncEngine:
-    return create_async_engine(settings.database_url)
+    return create_async_engine(settings.database_url, pool_size=0, max_overflow=30, echo=True)
 
 
 def create_sessionmaker(bind_engine: Union[AsyncEngine, AsyncConnection]) -> Callable[..., AsyncSession]:

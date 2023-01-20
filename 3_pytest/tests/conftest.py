@@ -7,9 +7,9 @@ import pytest_asyncio
 from _pytest.monkeypatch import MonkeyPatch
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine, AsyncSession, AsyncTransaction
-from my_async_app.config import settings
-from my_async_app.db import Base, create_engine, create_sessionmaker
-from my_async_app.fastapi_app import app
+from config import settings
+from db import Base, create_engine, create_sessionmaker
+from main import app
 from tests.db_utils import create_db
 
 settings.database_url = f'{settings.database_url}_test'

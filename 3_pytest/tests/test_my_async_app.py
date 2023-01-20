@@ -1,4 +1,4 @@
-from unittest.mock import AsyncMock, MagicMock, Mock, patch
+from unittest.mock import AsyncMock, patch
 
 import pytest
 import respx
@@ -6,8 +6,8 @@ from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 
-from my_async_app.db_models import MyTable
-from my_async_app.some_functions import (
+from db_models import MyTable
+from some_functions import (
     NiceClass, fetch_important_data_from_async_function, fetch_important_data_from_database,
     fetch_important_data_from_internet,
 )

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from my_async_app.more_functions import mock_me
+from more_functions import mock_me
 
 app = FastAPI()
 
