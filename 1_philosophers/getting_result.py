@@ -1,5 +1,5 @@
 import time
-from multiprocessing import
+from concurrent.futures import ProcessPoolExecutor
 
 
 def task() -> str:
